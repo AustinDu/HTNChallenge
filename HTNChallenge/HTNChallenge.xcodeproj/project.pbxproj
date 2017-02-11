@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1A8FC25DF1252ECE4949B4AD /* Pods_HTNChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66DD80F9F840D726200D8800 /* Pods_HTNChallenge.framework */; };
+		261E3E171E4EAEE8001E6724 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261E3E161E4EAEE8001E6724 /* FilterViewController.swift */; };
+		261E3E191E4EAFA2001E6724 /* FilterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261E3E181E4EAFA2001E6724 /* FilterConstants.swift */; };
+		261E3E201E4EB37B001E6724 /* FilterSkillCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261E3E1E1E4EB37B001E6724 /* FilterSkillCategoryTableViewCell.swift */; };
+		261E3E211E4EB37B001E6724 /* FilterSkillCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 261E3E1F1E4EB37B001E6724 /* FilterSkillCategoryTableViewCell.xib */; };
 		262A00341E46C15F00AF2DFB /* ParticipantSkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262A00331E46C15F00AF2DFB /* ParticipantSkillView.swift */; };
 		26D4405A1E4689D2008D38EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D440591E4689D2008D38EB /* AppDelegate.swift */; };
 		26D4405F1E4689D2008D38EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26D4405D1E4689D2008D38EB /* Main.storyboard */; };
@@ -29,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		261E3E161E4EAEE8001E6724 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		261E3E181E4EAFA2001E6724 /* FilterConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterConstants.swift; sourceTree = "<group>"; };
+		261E3E1E1E4EB37B001E6724 /* FilterSkillCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSkillCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		261E3E1F1E4EB37B001E6724 /* FilterSkillCategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterSkillCategoryTableViewCell.xib; sourceTree = "<group>"; };
 		262A00331E46C15F00AF2DFB /* ParticipantSkillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticipantSkillView.swift; sourceTree = "<group>"; };
 		26D440561E4689D2008D38EB /* HTNChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTNChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D440591E4689D2008D38EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +74,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		261E3E151E4EAED8001E6724 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				261E3E1B1E4EB33C001E6724 /* Views */,
+				261E3E1A1E4EB01C001E6724 /* Controller */,
+				261E3E181E4EAFA2001E6724 /* FilterConstants.swift */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
+		261E3E1A1E4EB01C001E6724 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				261E3E161E4EAEE8001E6724 /* FilterViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		261E3E1B1E4EB33C001E6724 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				261E3E1E1E4EB37B001E6724 /* FilterSkillCategoryTableViewCell.swift */,
+				261E3E1F1E4EB37B001E6724 /* FilterSkillCategoryTableViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		26D4404D1E4689D2008D38EB = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +124,7 @@
 			children = (
 				26D440591E4689D2008D38EB /* AppDelegate.swift */,
 				26D440711E468AF5008D38EB /* NetworkManager.swift */,
+				261E3E151E4EAED8001E6724 /* Filter */,
 				26D4406B1E468A8E008D38EB /* ParticipantList */,
 				26D4406C1E468A9E008D38EB /* ParticipantDetails */,
 				26D4407C1E468BFA008D38EB /* Model */,
@@ -257,6 +293,7 @@
 				26D440821E46907E008D38EB /* ParticipantSummaryTableViewCell.xib in Resources */,
 				26D440641E4689D2008D38EB /* LaunchScreen.storyboard in Resources */,
 				26D440611E4689D2008D38EB /* Assets.xcassets in Resources */,
+				261E3E211E4EB37B001E6724 /* FilterSkillCategoryTableViewCell.xib in Resources */,
 				26D4405F1E4689D2008D38EB /* Main.storyboard in Resources */,
 				26D4408A1E4690F5008D38EB /* ParticipantLocationTableViewCell.xib in Resources */,
 				26D440861E4690C8008D38EB /* ParticipantDetailedInfoTableViewCell.xib in Resources */,
@@ -320,14 +357,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				26D440851E4690C8008D38EB /* ParticipantDetailedInfoTableViewCell.swift in Sources */,
+				261E3E201E4EB37B001E6724 /* FilterSkillCategoryTableViewCell.swift in Sources */,
 				26D440801E468F98008D38EB /* ParticipantSummaryTableViewCell.swift in Sources */,
 				26D440891E4690F5008D38EB /* ParticipantLocationTableViewCell.swift in Sources */,
 				26D440721E468AF5008D38EB /* NetworkManager.swift in Sources */,
 				26D440741E468B56008D38EB /* ParticipantDetailsConstants.swift in Sources */,
 				26D4406E1E468AD5008D38EB /* ParticipantListViewController.swift in Sources */,
+				261E3E171E4EAEE8001E6724 /* FilterViewController.swift in Sources */,
 				26D4407E1E468C1A008D38EB /* Participant.swift in Sources */,
 				262A00341E46C15F00AF2DFB /* ParticipantSkillView.swift in Sources */,
 				26D440761E468B63008D38EB /* ParticipantListConstants.swift in Sources */,
+				261E3E191E4EAFA2001E6724 /* FilterConstants.swift in Sources */,
 				26D440701E468AE6008D38EB /* ParticipantDetailsViewController.swift in Sources */,
 				26D4405A1E4689D2008D38EB /* AppDelegate.swift in Sources */,
 			);

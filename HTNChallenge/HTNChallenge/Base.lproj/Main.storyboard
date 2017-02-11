@@ -26,24 +26,111 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="211-u0-rc2">
+                                <rect key="frame" x="155.5" y="563" width="64" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUI-zb-nhm">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                        <state key="normal" image="icn-filter"/>
+                                        <connections>
+                                            <action selector="onFilterBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="azT-AP-KCk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="eUI-zb-nhm" secondAttribute="trailing" id="Ivf-cz-X5S"/>
+                                    <constraint firstItem="eUI-zb-nhm" firstAttribute="top" secondItem="211-u0-rc2" secondAttribute="top" id="JOM-63-NdT"/>
+                                    <constraint firstAttribute="width" constant="64" id="ZHK-gq-6su"/>
+                                    <constraint firstAttribute="bottom" secondItem="eUI-zb-nhm" secondAttribute="bottom" id="gbM-Ba-4jW"/>
+                                    <constraint firstItem="eUI-zb-nhm" firstAttribute="leading" secondItem="211-u0-rc2" secondAttribute="leading" id="ibd-xD-87y"/>
+                                    <constraint firstAttribute="height" constant="64" id="tpW-cH-G4z"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="211-u0-rc2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FHV-h0-4Wy"/>
                             <constraint firstAttribute="bottomMargin" secondItem="MbU-Sn-SeW" secondAttribute="bottom" id="L1W-V1-4FJ"/>
                             <constraint firstItem="MbU-Sn-SeW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="RWf-In-x0B"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="211-u0-rc2" secondAttribute="bottom" constant="40" id="XdZ-xz-K0c"/>
                             <constraint firstItem="MbU-Sn-SeW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bfG-4F-IZP"/>
                             <constraint firstAttribute="trailing" secondItem="MbU-Sn-SeW" secondAttribute="trailing" id="klW-Xb-Lop"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Ix-c0-lTJ"/>
                     <connections>
+                        <outlet property="filterBtn" destination="211-u0-rc2" id="ZhB-Bf-kh4"/>
                         <outlet property="tableView" destination="MbU-Sn-SeW" id="XhS-6r-WT6"/>
                         <segue destination="8tR-HR-QL8" kind="show" id="LHl-aF-gEw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="986" y="777"/>
+            <point key="canvasLocation" x="984.79999999999995" y="776.76161919040487"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="kuu-IG-YeP">
+            <objects>
+                <viewController storyboardIdentifier="FilterViewControllerIdentifier" id="yd3-Pj-eDl" customClass="FilterViewController" customModule="HTNChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ad-ib-GBB"/>
+                        <viewControllerLayoutGuide type="bottom" id="bpQ-jV-j0V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qZP-fc-cF4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDW-4o-5jp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="9sb-rV-O3J"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ZB-gk-HKL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Filter" id="7nc-Nh-xVI">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="iYc-3g-HUN">
+                                            <connections>
+                                                <action selector="onCancelBtnTapped:" destination="yd3-Pj-eDl" id="Gl9-em-Lc4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Apply" id="bjH-l2-aLo">
+                                            <connections>
+                                                <action selector="onApplyBtnTapped:" destination="yd3-Pj-eDl" id="0S3-cF-DXk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vlk-aD-fS4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vlk-aD-fS4" secondAttribute="trailing" id="5OR-bA-phQ"/>
+                            <constraint firstAttribute="trailing" secondItem="9ZB-gk-HKL" secondAttribute="trailing" id="5o3-uB-yLx"/>
+                            <constraint firstItem="bpQ-jV-j0V" firstAttribute="top" secondItem="vlk-aD-fS4" secondAttribute="bottom" id="EgQ-o1-eKn"/>
+                            <constraint firstItem="9ZB-gk-HKL" firstAttribute="top" secondItem="6ad-ib-GBB" secondAttribute="bottom" id="OWS-vE-Wj8"/>
+                            <constraint firstItem="9ZB-gk-HKL" firstAttribute="leading" secondItem="qZP-fc-cF4" secondAttribute="leading" id="QYe-Kc-GDz"/>
+                            <constraint firstItem="vlk-aD-fS4" firstAttribute="top" secondItem="9ZB-gk-HKL" secondAttribute="bottom" id="Qn6-gX-LX4"/>
+                            <constraint firstItem="eDW-4o-5jp" firstAttribute="leading" secondItem="qZP-fc-cF4" secondAttribute="leading" id="eGZ-3z-juV"/>
+                            <constraint firstItem="vlk-aD-fS4" firstAttribute="leading" secondItem="qZP-fc-cF4" secondAttribute="leading" id="hlI-7W-9tA"/>
+                            <constraint firstAttribute="trailing" secondItem="eDW-4o-5jp" secondAttribute="trailing" id="uRl-wi-Fhg"/>
+                            <constraint firstItem="9ZB-gk-HKL" firstAttribute="top" secondItem="eDW-4o-5jp" secondAttribute="bottom" id="yep-0z-EAb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="vlk-aD-fS4" id="9z0-GA-RP1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ezf-dK-AAr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981.60000000000002" y="1474.8125937031487"/>
         </scene>
         <!--Participant Details View Controller-->
         <scene sceneID="t97-tg-MnW">
@@ -97,4 +184,7 @@
             <point key="canvasLocation" x="117.59999999999999" y="776.76161919040487"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icn-filter" width="18" height="12"/>
+    </resources>
 </document>

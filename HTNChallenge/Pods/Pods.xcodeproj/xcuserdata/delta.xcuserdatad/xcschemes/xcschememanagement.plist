@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>M13Checkbox.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-HTNChallenge.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,17 +32,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6C927503BAB1222A2247EA580B33584C</key>
+		<key>189EA9A2F62EEC74EE4B50EF1DAEB160</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A6FC359C075EBB9169311F417ECD824</key>
+		<key>20A9DD9ABBF08BC57372A26C35327BF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FCA74C0753F837A51019995BA184E56</key>
 		<dict>
 			<key>primary</key>
 			<true/>
