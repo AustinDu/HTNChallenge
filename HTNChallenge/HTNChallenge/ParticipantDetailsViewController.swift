@@ -10,10 +10,13 @@ import UIKit
 
 class ParticipantDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    // MARK: IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: Properties
     var participant: Participant?
     
+    // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initTableView()
@@ -34,6 +37,7 @@ class ParticipantDetailsViewController: UIViewController, UITableViewDelegate, U
         tableView.register(locationNib, forCellReuseIdentifier: ParticipantLocationTableViewCellIdentifier)
     }
     
+    // MARK: Tableview delegate and datasource methods
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:

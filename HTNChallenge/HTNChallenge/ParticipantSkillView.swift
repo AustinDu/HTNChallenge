@@ -17,8 +17,6 @@ class ParticipantSkillView: UIView {
     @IBOutlet weak var skillLevelLabel: UILabel!
     @IBOutlet weak var bulletLabel: UILabel!
     
-    // MARK: Constants
-    
     // MARK: Properties
     var contentView : UIView?
     
@@ -32,6 +30,9 @@ class ParticipantSkillView: UIView {
         xibSetup()
     }
     
+    /**
+     Setup xib for view reuse
+     */
     func xibSetup() {
         contentView = loadViewFromNib()
         

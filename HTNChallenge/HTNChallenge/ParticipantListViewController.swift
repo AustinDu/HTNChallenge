@@ -136,6 +136,9 @@ class ParticipantListViewController: UIViewController, UITableViewDelegate, UITa
         self.tableView.reloadData()
     }
     
+    /**
+     Used to filter by both category and name
+     */
     func filterWithCurrentSettings() {
         if self.selectedSkillsFilter != [] {
             self.filteredParticipants = self.participants.filter { participant in
@@ -171,6 +174,9 @@ class ParticipantListViewController: UIViewController, UITableViewDelegate, UITa
 
 }
 
+/**
+ Search bar methods
+ */
 extension ParticipantListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         self.searchQuery = self.searchController.searchBar.text!

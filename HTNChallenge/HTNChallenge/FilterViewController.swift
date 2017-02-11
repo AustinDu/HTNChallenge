@@ -8,17 +8,21 @@
 
 import UIKit
 
+// Used to pass information between filter modal and the participants list VC
 protocol FilterListDelegate {
     func receiveFilterInformation(selectedCategories: [Bool]);
 }
 
 class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    // MARK: IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: Properties
     var selectedCategories: [Bool] = []
     var delegate: FilterListDelegate?
     
+    // MARK: Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initTableView()
@@ -43,6 +47,7 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.initNibs()
     }
 
+    // MARK: Tableview delegate and datasource methods
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: FilterSkillCategoryTableViewCellIdentifier, for: indexPath) as? FilterSkillCategoryTableViewCell {
             let index = skillsToColour.index(skillsToColour.startIndex, offsetBy: indexPath.row)
@@ -70,6 +75,7 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return 1
     }
     
+    // MARK: IBActions
     @IBAction func onCancelBtnTapped(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }

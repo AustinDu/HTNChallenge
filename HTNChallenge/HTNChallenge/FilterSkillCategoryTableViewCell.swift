@@ -11,9 +11,11 @@ import M13Checkbox
 
 class FilterSkillCategoryTableViewCell: UITableViewCell {
 
+    // MARK: IBOutlets
     @IBOutlet var checkbox: M13Checkbox!
     @IBOutlet weak var skillLabel: UILabel!
     
+    // MARK: Lifecycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
